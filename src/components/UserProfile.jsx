@@ -73,7 +73,7 @@ const UserProfile = () => {
             {posts.map((post) => (
               <div key={post._id} className="post-item">
                 <img
-                  src={`https://social-feed-client.vercel.app/uploads/${post.image}`}
+                  src={`https://social-feed-server-xw5r.onrender.com/uploads/${post.image}`}
                   alt="Post"
                 />
               </div>
