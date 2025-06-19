@@ -1,0 +1,22 @@
+body, html, #root {
+  margin: 0;
+  height: 100%;
+  background: #0f0f15;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.main-content {
+  margin-left: 220px;
+  padding: 1rem;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 70px;
+}

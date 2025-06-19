@@ -1,0 +1,151 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: linear-gradient(145deg, #1f1f1f, #272727);
+  /* box-shadow: 2px 0 8px rgba(0, 122, 204, 0.2); */
+  padding: 2.7rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #4ac1ff;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.08em;
+  margin: 1rem 0;
+}
+
+.sidebar-logo .sidebar-text {
+  margin-left: 0.5rem;
+}
+
+.collapse-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #1f1f1f;
+  color: #4ac1ff;
+  padding: 0.5rem;
+  z-index: 10001; /* must be above sidebar */
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+   /* Hidden on desktop */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.sidebar-link:hover {
+  background-color: #4ac1ff;
+  color: #000;
+}
+
+.sidebar-link svg {
+  font-size: 1.2rem;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar.collapsed .sidebar-text {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .collapse-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background: #1f1f1f;
+    color: #4ac1ff;
+    padding: 0.5rem;
+    z-index: 10000;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .sidebar .sidebar-text {
+    display: inline;
+  }
+
+  .sidebar.collapsed .sidebar-text {
+    display: none;
+  }
+}
+
+.notification-bell {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 12px;
+  min-width: 16px;
+  text-align: center;
+}
+
+

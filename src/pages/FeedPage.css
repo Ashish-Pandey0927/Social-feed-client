@@ -1,0 +1,205 @@
+/* Hide Scrollbar (cross-browser) */
+.ig-feed-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #FAF6E9;
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  /* border-radius: 20px; */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+}
+.ig-feed-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+.ig-feed-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-radius: 14px 14px 0 0;
+}
+
+/* Title */
+.ig-feed-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #222;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Refresh Button */
+.ig-refresh-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 1.2rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.4);
+}
+.ig-refresh-btn:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Create Post Button */
+.ig-create-post-button {
+  display: inline-block;
+  margin: 1rem auto;
+  background-color: #14b8a6;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+}
+.ig-create-post-button:hover {
+  background-color: #0d9488;
+}
+
+/* No Posts */
+.ig-no-posts {
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* Post Card */
+.ig-post {
+  background: #ffffffd1;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ig-post:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Post Header */
+.ig-post-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.ig-profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb;
+}
+.ig-username {
+  font-weight: 600;
+  color: #222;
+  flex-grow: 1;
+}
+.ig-post-options {
+  font-size: 1.2rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.ig-post-options:hover {
+  color: #555;
+}
+
+/* Post Image */
+.ig-post-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Post Actions */
+.ig-post-actions {
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+}
+.ig-action-btn {
+  background: none;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.ig-action-btn:hover {
+  color: #2563eb;
+  transform: scale(1.2);
+}
+.ig-action-btn.liked {
+  color: #ef4444;
+}
+
+/* Likes & Caption */
+.ig-post-likes,
+.ig-post-caption {
+  padding: 0 1rem 0.8rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+.ig-post-caption strong {
+  color: #000;
+}
+/* Scroll to Top Button */
+.ig-scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #2563eb; /* matching your refresh button blue */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.ig-scroll-top-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.1);
+}

@@ -1,0 +1,133 @@
+/* Container with max height and scroll if needed, hide scrollbar */
+.profile-page {
+  max-width: 640px;
+  max-height: 90vh;           /* Limit height to viewport height */
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #161616;
+  color: #eee;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #4ac1ff44;
+  overflow-y: auto;           /* Enable vertical scrolling */
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE 10+ */
+}
+
+/* Hide scrollbar for Chrome, Edge, Safari */
+.profile-page::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Header flexbox, vertically centered, with balanced spacing */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Avatar styling */
+.avatar svg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #222;
+  padding: 5px;
+  box-shadow: 0 0 15px #4ac1ffaa;
+}
+
+/* User info aligned to left but spaced nicely */
+.user-info {
+  flex-grow: 1;
+}
+
+.user-info h1 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #4ac1ff;
+}
+
+/* Button styling */
+.edit-btn {
+  background-color: #4ac1ff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #121212;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 0 10px #4ac1ffbb;
+}
+
+.edit-btn:hover {
+  background-color: #6bd7ff;
+  box-shadow: 0 0 20px #6bd7ffcc;
+}
+
+/* Stats section: horizontally centered */
+.profile-stats {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #aaa;
+  justify-content: center;
+}
+
+/* Numbers bigger and bright blue */
+.profile-stats .number {
+  font-weight: 700;
+  display: block;
+  font-size: 20px;
+  color: #4ac1ff;
+  text-align: center;
+}
+
+/* Labels below numbers */
+.profile-stats .label {
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Bio text centered and nicely spaced */
+.profile-bio {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #ccc;
+  text-align: center;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Posts grid with gap */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding-bottom: 20px;
+}
+
+/* Each post image styling */
+.post-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 6px #4ac1ff88;
+}
+
+.post-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #4ac1ffcc;
+}
