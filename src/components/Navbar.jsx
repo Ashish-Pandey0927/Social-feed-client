@@ -82,7 +82,7 @@ const Navbar = () => {
         }`}
       >
         <div className="sidebar-logo">
-           {!isDesktopCollapsed && !isMobile && <span className="sidebar-text">Snapora</span>}
+           {!isDesktopCollapsed && !isMobile && <span className="sidebar-text">Social Feed</span>}
         </div>
 
         <ul className="sidebar-menu">
