@@ -34,7 +34,7 @@ export default function CreatePost() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/api/posts/create", formData, {
+      await axios.post("https://social-feed-server-xw5r.onrender.com/api/posts/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`, // ✅ Correct Template String
