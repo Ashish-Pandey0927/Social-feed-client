@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5000/api", // Change if hosted elsewhere
+  baseURL: "https://social-feed-server-xw5r.onrender.com", // Change if hosted elsewhere
 });
 
 // Automatically attach token to every request
