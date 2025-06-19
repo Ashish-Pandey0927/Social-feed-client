@@ -142,7 +142,7 @@ const FeedPage = () => {
 
             {post.image && (
               <img
-                src={`http://localhost:5000/uploads/${post.image}`}
+                src={`https://social-feed-server-xw5r.onrender.com/uploads/${post.image}`}
                 alt="Post"
                 className="ig-post-image"
               />
